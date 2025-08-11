@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クラウドストレージサービス比較</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>クラウドストレージサービス比較</h1>
+        <div class="header-controls">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="サービス名で検索...">
+            </div>
+            <div class="region-currency-controls">
+                <div class="control-group">
+                    <label for="displayModeSelector">表示方法:</label>
+                    <select id="displayModeSelector" class="selector">
+                        <!-- 表示モードオプションはJavaScriptで生成 -->
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label for="regionSelector" id="regionSelectorLabel">リージョン:</label>
+                    <select id="regionSelector" class="selector">
+                        <!-- リージョン/地域オプションはJavaScriptで生成 -->
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label for="currencySelector">通貨:</label>
+                    <select id="currencySelector" class="selector">
+                        <!-- 通貨オプションはJavaScriptで生成 -->
+                    </select>
+                </div>
+            </div>
+            <div class="theme-selector">
+                <label class="theme-option">
+                    <input type="radio" name="theme" value="light" checked>
+                    <span>☀️ ライト</span>
+                </label>
+                <label class="theme-option">
+                    <input type="radio" name="theme" value="dark">
+                    <span>🌙 ダーク</span>
+                </label>
+            </div>
+            <button id="refreshDataBtn" class="refresh-btn" title="最新データを取得">
+                🔄 更新
+            </button>
+        </div>
+        <div class="update-info">
+            <div id="lastUpdated" class="last-updated"></div>
+            <div id="exchangeRate" class="exchange-rate"></div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <aside class="filter-panel">
+            <h3>フィルタ</h3>
+            
+            <div class="filter-group">
+                <h4>プロバイダ</h4>
+                <div class="checkbox-group" id="providerFilters">
+                    <label><input type="checkbox" value="AWS" checked> AWS</label>
+                    <label><input type="checkbox" value="Azure" checked> Azure</label>
+                    <label><input type="checkbox" value="GCP" checked> GCP</label>
+                    <label><input type="checkbox" value="Oracle" checked> Oracle</label>
+                    <label><input type="checkbox" value="IBM" checked> IBM</label>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <h4>ストレージタイプ</h4>
+                <div class="checkbox-group" id="typeFilters">
+                    <label><input type="checkbox" value="Object Storage" checked> Object Storage</label>
+                    <label><input type="checkbox" value="Block Storage" checked> Block Storage</label>
+                    <label><input type="checkbox" value="File Storage" checked> File Storage</label>
+                    <label><input type="checkbox" value="Archive Storage" checked> Archive Storage</label>
+                    <label><input type="checkbox" value="NoSQL Database" checked> NoSQL Database</label>
+                    <label><input type="checkbox" value="Database Storage" checked> Database Storage</label>
+                    <label><input type="checkbox" value="Data Lake" checked> Data Lake</label>
+                </div>
+            </div>
+
+            <button id="clearFilters" class="clear-btn">フィルタクリア</button>
+        </aside>
+
+        <section class="content-area">
+            <div class="table-container">
+                <table id="servicesTable" class="services-table">
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox" id="selectAll"></th>
+                            <th>サービス名</th>
+                            <th>プロバイダ</th>
+                            <th>タイプ</th>
+                            <th id="priceHeader">価格</th>
+                            <th>可用性</th>
+                        </tr>
+                    </thead>
+                    <tbody id="servicesTableBody">
+                        <!-- サービス一覧がここに表示される -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="compare-section">
+                <button id="compareBtn" class="compare-btn" disabled>
+                    比較する (<span id="selectedCount">0</span>)
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- 比較モーダル -->
+    <div id="compareModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>サービス比較</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body" id="compareContent">
+                <!-- 比較内容がここに表示される -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/ThemeManager.js"></script>
+    <script src="js/RegionManager.js"></script>
+    <script src="js/CurrencyManager.js"></script>
+    <script src="js/DataFetcher.js"></script>
+    <script src="js/StorageService.js"></script>
+    <script src="js/FilterManager.js"></script>
+    <script src="js/CompareManager.js"></script>
+    <script src="js/UIManager.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

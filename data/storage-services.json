@@ -1,0 +1,935 @@
+{
+  "services": [
+    {
+      "id": "aws-s3",
+      "name": "Amazon S3",
+      "provider": "AWS",
+      "type": "Object Storage",
+      "category": "Object",
+      "pricing": {
+        "model": "Pay-as-you-go",
+        "regions": {
+          "ap-northeast-1": {
+            "storage": { "usd": 0.023, "jpy": 3.45 },
+            "requests": { "usd": 0.0004, "jpy": 0.06 }
+          },
+          "ap-northeast-3": {
+            "storage": { "usd": 0.023, "jpy": 3.45 },
+            "requests": { "usd": 0.0004, "jpy": 0.06 }
+          },
+          "us-east-1": {
+            "storage": { "usd": 0.023, "jpy": 3.45 },
+            "requests": { "usd": 0.0004, "jpy": 0.06 }
+          },
+          "us-east-2": {
+            "storage": { "usd": 0.025, "jpy": 3.75 },
+            "requests": { "usd": 0.0004, "jpy": 0.06 }
+          },
+          "us-west-1": {
+            "storage": { "usd": 0.026, "jpy": 3.90 },
+            "requests": { "usd": 0.0004, "jpy": 0.06 }
+          },
+          "us-west-2": {
+            "storage": { "usd": 0.023, "jpy": 3.45 },
+            "requests": { "usd": 0.0004, "jpy": 0.06 }
+          },
+          "ap-northeast-2": {
+            "storage": { "usd": 0.025, "jpy": 3.75 },
+            "requests": { "usd": 0.0004, "jpy": 0.06 }
+          },
+          "ap-east-1": {
+            "storage": { "usd": 0.025, "jpy": 3.75 },
+            "requests": { "usd": 0.0004, "jpy": 0.06 }
+          },
+          "ap-east-2": {
+            "storage": { "usd": 0.025, "jpy": 3.75 },
+            "requests": { "usd": 0.0004, "jpy": 0.06 }
+          },
+          "ap-southeast-1": {
+            "storage": { "usd": 0.025, "jpy": 3.75 },
+            "requests": { "usd": 0.0004, "jpy": 0.06 }
+          }
+        }
+      },
+      "features": {
+        "durability": "99.999999999%",
+        "availability": "99.99%",
+        "encryption": true,
+        "versioning": true,
+        "lifecycle": true
+      },
+      "useCases": ["Web applications", "Backup", "Archive"],
+      "description": "Scalable object storage service"
+    },
+    {
+      "id": "aws-s3-glacier",
+      "name": "Amazon S3 Glacier",
+      "provider": "AWS",
+      "type": "Archive Storage",
+      "category": "Archive",
+      "pricing": {
+        "model": "Pay-as-you-go",
+        "regions": {
+          "ap-northeast-1": {
+            "storage": { "usd": 0.004, "jpy": 0.60 },
+            "requests": { "usd": 0.05, "jpy": 7.50 }
+          },
+          "ap-northeast-3": {
+            "storage": { "usd": 0.004, "jpy": 0.60 },
+            "requests": { "usd": 0.05, "jpy": 7.50 }
+          },
+          "us-east-1": {
+            "storage": { "usd": 0.004, "jpy": 0.60 },
+            "requests": { "usd": 0.05, "jpy": 7.50 }
+          },
+          "us-east-2": {
+            "storage": { "usd": 0.004, "jpy": 0.60 },
+            "requests": { "usd": 0.05, "jpy": 7.50 }
+          },
+          "us-west-1": {
+            "storage": { "usd": 0.004, "jpy": 0.60 },
+            "requests": { "usd": 0.05, "jpy": 7.50 }
+          },
+          "us-west-2": {
+            "storage": { "usd": 0.004, "jpy": 0.60 },
+            "requests": { "usd": 0.05, "jpy": 7.50 }
+          },
+          "ap-northeast-2": {
+            "storage": { "usd": 0.004, "jpy": 0.60 },
+            "requests": { "usd": 0.05, "jpy": 7.50 }
+          },
+          "ap-east-1": {
+            "storage": { "usd": 0.004, "jpy": 0.60 },
+            "requests": { "usd": 0.05, "jpy": 7.50 }
+          },
+          "ap-east-2": {
+            "storage": { "usd": 0.004, "jpy": 0.60 },
+            "requests": { "usd": 0.05, "jpy": 7.50 }
+          },
+          "ap-southeast-1": {
+            "storage": { "usd": 0.004, "jpy": 0.60 },
+            "requests": { "usd": 0.05, "jpy": 7.50 }
+          }
+        }
+      },
+      "features": {
+        "durability": "99.999999999%",
+        "availability": "99.99%",
+        "encryption": true,
+        "versioning": true,
+        "lifecycle": true
+      },
+      "useCases": ["Long-term backup", "Archive", "Compliance"],
+      "description": "Low-cost archive storage"
+    },
+    {
+      "id": "aws-s3-deep-archive",
+      "name": "Amazon S3 Glacier Deep Archive",
+      "provider": "AWS",
+      "type": "Archive Storage",
+      "category": "Archive",
+      "pricing": {
+        "model": "Pay-as-you-go",
+        "regions": {
+          "ap-northeast-1": {
+            "storage": { "usd": 0.00099, "jpy": 0.15 },
+            "requests": { "usd": 0.10, "jpy": 15.0 }
+          },
+          "ap-northeast-3": {
+            "storage": { "usd": 0.00099, "jpy": 0.15 },
+            "requests": { "usd": 0.10, "jpy": 15.0 }
+          },
+          "us-east-1": {
+            "storage": { "usd": 0.00099, "jpy": 0.15 },
+            "requests": { "usd": 0.10, "jpy": 15.0 }
+          },
+          "us-east-2": {
+            "storage": { "usd": 0.00099, "jpy": 0.15 },
+            "requests": { "usd": 0.10, "jpy": 15.0 }
+          },
+          "us-west-1": {
+            "storage": { "usd": 0.00099, "jpy": 0.15 },
+            "requests": { "usd": 0.10, "jpy": 15.0 }
+          },
+          "us-west-2": {
+            "storage": { "usd": 0.00099, "jpy": 0.15 },
+            "requests": { "usd": 0.10, "jpy": 15.0 }
+          },
+          "ap-northeast-2": {
+            "storage": { "usd": 0.00099, "jpy": 0.15 },
+            "requests": { "usd": 0.10, "jpy": 15.0 }
+          },
+          "ap-east-1": {
+            "storage": { "usd": 0.00099, "jpy": 0.15 },
+            "requests": { "usd": 0.10, "jpy": 15.0 }
+          },
+          "ap-east-2": {
+            "storage": { "usd": 0.00099, "jpy": 0.15 },
+            "requests": { "usd": 0.10, "jpy": 15.0 }
+          },
+          "ap-southeast-1": {
+            "storage": { "usd": 0.00099, "jpy": 0.15 },
+            "requests": { "usd": 0.10, "jpy": 15.0 }
+          }
+        }
+      },
+      "features": {
+        "durability": "99.999999999%",
+        "availability": "99.99%",
+        "encryption": true,
+        "versioning": true,
+        "lifecycle": true
+      },
+      "useCases": ["Long-term archive", "Compliance", "Digital preservation"],
+      "description": "Lowest-cost archive storage"
+    },
+    {
+      "id": "aws-ebs",
+      "name": "Amazon EBS",
+      "provider": "AWS",
+      "type": "Block Storage",
+      "category": "Block",
+      "pricing": {
+        "model": "Pay-as-you-go",
+        "regions": {
+          "ap-northeast-1": {
+            "storage": { "usd": 0.10, "jpy": 15.0 },
+            "requests": { "usd": 0, "jpy": 0 }
+          },
+          "ap-northeast-3": {
+            "storage": { "usd": 0.10, "jpy": 15.0 },
+            "requests": { "usd": 0, "jpy": 0 }
+          },
+          "us-east-1": {
+            "storage": { "usd": 0.10, "jpy": 15.0 },
+            "requests": { "usd": 0, "jpy": 0 }
+          },
+          "us-east-2": {
+            "storage": { "usd": 0.10, "jpy": 15.0 },
+            "requests": { "usd": 0, "jpy": 0 }
+          },
+          "us-west-1": {
+            "storage": { "usd": 0.12, "jpy": 18.0 },
+            "requests": { "usd": 0, "jpy": 0 }
+          },
+          "us-west-2": {
+            "storage": { "usd": 0.10, "jpy": 15.0 },
+            "requests": { "usd": 0, "jpy": 0 }
+          },
+          "ap-northeast-2": {
+            "storage": { "usd": 0.11, "jpy": 16.5 },
+            "requests": { "usd": 0, "jpy": 0 }
+          },
+          "ap-east-1": {
+            "storage": { "usd": 0.11, "jpy": 16.5 },
+            "requests": { "usd": 0, "jpy": 0 }
+          },
+          "ap-east-2": {
+            "storage": { "usd": 0.11, "jpy": 16.5 },
+            "requests": { "usd": 0, "jpy": 0 }
+          },
+          "ap-southeast-1": {
+            "storage": { "usd": 0.11, "jpy": 16.5 },
+            "requests": { "usd": 0, "jpy": 0 }
+          }
+        }
+      },
+      "features": {
+        "durability": "99.999%",
+        "availability": "99.99%",
+        "encryption": true,
+        "versioning": false,
+        "lifecycle": false
+      },
+      "useCases": ["EC2 instances", "Database storage"],
+      "description": "High-performance block storage"
+    },
+    {
+      "id": "aws-efs",
+      "name": "Amazon EFS",
+      "provider": "AWS",
+      "type": "File Storage",
+      "category": "File",
+      "pricing": {
+        "model": "Pay-as-you-go",
+        "regions": {
+          "ap-northeast-1": {
+            "storage": { "usd": 0.30, "jpy": 45.0 },
+            "requests": { "usd": 0, "jpy": 0 }
+          },
+          "ap-northeast-3": {
+            "storage": { "usd": 0.30, "jpy": 45.0 },
+            "requests": { "usd": 0, "jpy": 0 }
+          },
+          "us-east-1": {
+            "storage": { "usd": 0.30, "jpy": 45.0 },
+            "requests": { "usd": 0, "jpy": 0 }
+          },
+          "us-east-2": {
+            "storage": { "usd": 0.30, "jpy": 45.0 },
+            "requests": { "usd": 0, "jpy": 0 }
+          },
+          "us-west-1": {
+            "storage": { "usd": 0.34, "jpy": 51.0 },
+            "requests": { "usd": 0, "jpy": 0 }
+          },
+          "us-west-2": {
+            "storage": { "usd": 0.30, "jpy": 45.0 },
+            "requests": { "usd": 0, "jpy": 0 }
+          },
+          "ap-northeast-2": {
+            "storage": { "usd": 0.33, "jpy": 49.5 },
+            "requests": { "usd": 0, "jpy": 0 }
+          },
+          "ap-east-1": {
+            "storage": { "usd": 0.33, "jpy": 49.5 },
+            "requests": { "usd": 0, "jpy": 0 }
+          },
+          "ap-east-2": {
+            "storage": { "usd": 0.33, "jpy": 49.5 },
+            "requests": { "usd": 0, "jpy": 0 }
+          },
+          "ap-southeast-1": {
+            "storage": { "usd": 0.33, "jpy": 49.5 },
+            "requests": { "usd": 0, "jpy": 0 }
+          }
+        }
+      },
+      "features": {
+        "durability": "99.999999999%",
+        "availability": "99.99%",
+        "encryption": true,
+        "versioning": false,
+        "lifecycle": true
+      },
+      "useCases": ["Shared file storage", "Content management", "Web serving"],
+      "description": "Fully managed NFS file system"
+    },
+    {
+      "id": "aws-fsx",
+      "name": "Amazon FSx",
+      "provider": "AWS",
+      "type": "File Storage",
+      "category": "File",
+      "pricing": {
+        "model": "Pay-as-you-go",
+        "storage": "$0.13/GB/month",
+        "requests": "Included"
+      },
+      "features": {
+        "durability": "99.999%",
+        "availability": "99.9%",
+        "encryption": true,
+        "versioning": false,
+        "lifecycle": false
+      },
+      "useCases": ["High-performance computing", "Machine learning", "Media processing"],
+      "description": "High-performance file systems"
+    },
+    {
+      "id": "aws-dynamodb",
+      "name": "Amazon DynamoDB",
+      "provider": "AWS",
+      "type": "NoSQL Database",
+      "category": "Database",
+      "pricing": {
+        "model": "Pay-as-you-go",
+        "storage": "$0.25/GB/month",
+        "requests": "$1.25/million requests"
+      },
+      "features": {
+        "durability": "99.999999999%",
+        "availability": "99.99%",
+        "encryption": true,
+        "versioning": false,
+        "lifecycle": true
+      },
+      "useCases": ["Web applications", "Gaming", "IoT"],
+      "description": "Fully managed NoSQL database"
+    },
+    {
+      "id": "azure-blob",
+      "name": "Azure Blob Storage",
+      "provider": "Azure",
+      "type": "Object Storage",
+      "category": "Object",
+      "pricing": {
+        "model": "Pay-as-you-go",
+        "regions": {
+          "ap-northeast-1": {
+            "storage": { "usd": 0.024, "jpy": 3.60 },
+            "requests": { "usd": 0.0004, "jpy": 0.06 }
+          },
+          "ap-northeast-3": {
+            "storage": { "usd": 0.024, "jpy": 3.60 },
+            "requests": { "usd": 0.0004, "jpy": 0.06 }
+          },
+          "us-east-1": {
+            "storage": { "usd": 0.024, "jpy": 3.60 },
+            "requests": { "usd": 0.0004, "jpy": 0.06 }
+          },
+          "us-east-2": {
+            "storage": { "usd": 0.026, "jpy": 3.90 },
+            "requests": { "usd": 0.0004, "jpy": 0.06 }
+          },
+          "us-west-1": {
+            "storage": { "usd": 0.027, "jpy": 4.05 },
+            "requests": { "usd": 0.0004, "jpy": 0.06 }
+          },
+          "us-west-2": {
+            "storage": { "usd": 0.024, "jpy": 3.60 },
+            "requests": { "usd": 0.0004, "jpy": 0.06 }
+          },
+          "ap-northeast-2": {
+            "storage": { "usd": 0.025, "jpy": 3.75 },
+            "requests": { "usd": 0.0004, "jpy": 0.06 }
+          },
+          "ap-east-1": {
+            "storage": { "usd": 0.025, "jpy": 3.75 },
+            "requests": { "usd": 0.0004, "jpy": 0.06 }
+          },
+          "ap-east-2": {
+            "storage": { "usd": 0.025, "jpy": 3.75 },
+            "requests": { "usd": 0.0004, "jpy": 0.06 }
+          },
+          "ap-southeast-1": {
+            "storage": { "usd": 0.025, "jpy": 3.75 },
+            "requests": { "usd": 0.0004, "jpy": 0.06 }
+          }
+        }
+      },
+      "features": {
+        "durability": "99.999999999%",
+        "availability": "99.9%",
+        "encryption": true,
+        "versioning": true,
+        "lifecycle": true
+      },
+      "useCases": ["Web applications", "Backup", "Analytics"],
+      "description": "Massively scalable object storage"
+    },
+    {
+      "id": "azure-archive",
+      "name": "Azure Archive Storage",
+      "provider": "Azure",
+      "type": "Archive Storage",
+      "category": "Archive",
+      "pricing": {
+        "model": "Pay-as-you-go",
+        "storage": "$0.00099/GB/month",
+        "requests": "$0.10/1000 requests"
+      },
+      "features": {
+        "durability": "99.999999999%",
+        "availability": "99.9%",
+        "encryption": true,
+        "versioning": true,
+        "lifecycle": true
+      },
+      "useCases": ["Long-term backup", "Compliance", "Archive"],
+      "description": "Ultra-low-cost archive storage"
+    },
+    {
+      "id": "azure-disk",
+      "name": "Azure Managed Disks",
+      "provider": "Azure",
+      "type": "Block Storage",
+      "category": "Block",
+      "pricing": {
+        "model": "Pay-as-you-go",
+        "storage": "$0.12/GB/month",
+        "requests": "Included"
+      },
+      "features": {
+        "durability": "99.999%",
+        "availability": "99.9%",
+        "encryption": true,
+        "versioning": false,
+        "lifecycle": false
+      },
+      "useCases": ["Virtual machines", "Database storage"],
+      "description": "High-performance managed disks"
+    },
+    {
+      "id": "azure-files",
+      "name": "Azure Files",
+      "provider": "Azure",
+      "type": "File Storage",
+      "category": "File",
+      "pricing": {
+        "model": "Pay-as-you-go",
+        "storage": "$0.06/GB/month",
+        "requests": "$0.0004/1000 requests"
+      },
+      "features": {
+        "durability": "99.999999999%",
+        "availability": "99.9%",
+        "encryption": true,
+        "versioning": false,
+        "lifecycle": true
+      },
+      "useCases": ["File shares", "Lift and shift", "Configuration files"],
+      "description": "Fully managed file shares"
+    },
+    {
+      "id": "azure-netapp",
+      "name": "Azure NetApp Files",
+      "provider": "Azure",
+      "type": "File Storage",
+      "category": "File",
+      "pricing": {
+        "model": "Pay-as-you-go",
+        "storage": "$0.50/GB/month",
+        "requests": "Included"
+      },
+      "features": {
+        "durability": "99.99%",
+        "availability": "99.99%",
+        "encryption": true,
+        "versioning": true,
+        "lifecycle": false
+      },
+      "useCases": ["Enterprise applications", "SAP", "High-performance computing"],
+      "description": "Enterprise-grade NFS and SMB file storage"
+    },
+    {
+      "id": "azure-cosmos",
+      "name": "Azure Cosmos DB",
+      "provider": "Azure",
+      "type": "NoSQL Database",
+      "category": "Database",
+      "pricing": {
+        "model": "Pay-as-you-go",
+        "storage": "$0.25/GB/month",
+        "requests": "$0.008/RU/s/hour"
+      },
+      "features": {
+        "durability": "99.999%",
+        "availability": "99.999%",
+        "encryption": true,
+        "versioning": false,
+        "lifecycle": true
+      },
+      "useCases": ["Global applications", "IoT", "Gaming"],
+      "description": "Globally distributed multi-model database"
+    },
+    {
+      "id": "azure-data-lake",
+      "name": "Azure Data Lake Storage",
+      "provider": "Azure",
+      "type": "Data Lake",
+      "category": "Analytics",
+      "pricing": {
+        "model": "Pay-as-you-go",
+        "storage": "$0.021/GB/month",
+        "requests": "$0.0004/1000 requests"
+      },
+      "features": {
+        "durability": "99.999999999%",
+        "availability": "99.9%",
+        "encryption": true,
+        "versioning": true,
+        "lifecycle": true
+      },
+      "useCases": ["Big data analytics", "Data warehousing", "Machine learning"],
+      "description": "Scalable data lake for analytics"
+    },
+    {
+      "id": "gcp-storage",
+      "name": "Google Cloud Storage",
+      "provider": "GCP",
+      "type": "Object Storage",
+      "category": "Object",
+      "pricing": {
+        "model": "Pay-as-you-go",
+        "regions": {
+          "ap-northeast-1": {
+            "storage": { "usd": 0.020, "jpy": 3.00 },
+            "requests": { "usd": 0.0004, "jpy": 0.06 }
+          },
+          "ap-northeast-3": {
+            "storage": { "usd": 0.020, "jpy": 3.00 },
+            "requests": { "usd": 0.0004, "jpy": 0.06 }
+          },
+          "us-east-1": {
+            "storage": { "usd": 0.020, "jpy": 3.00 },
+            "requests": { "usd": 0.0004, "jpy": 0.06 }
+          },
+          "us-east-2": {
+            "storage": { "usd": 0.020, "jpy": 3.00 },
+            "requests": { "usd": 0.0004, "jpy": 0.06 }
+          },
+          "us-west-1": {
+            "storage": { "usd": 0.023, "jpy": 3.45 },
+            "requests": { "usd": 0.0004, "jpy": 0.06 }
+          },
+          "us-west-2": {
+            "storage": { "usd": 0.020, "jpy": 3.00 },
+            "requests": { "usd": 0.0004, "jpy": 0.06 }
+          },
+          "ap-northeast-2": {
+            "storage": { "usd": 0.023, "jpy": 3.45 },
+            "requests": { "usd": 0.0004, "jpy": 0.06 }
+          },
+          "ap-east-1": {
+            "storage": { "usd": 0.024, "jpy": 3.60 },
+            "requests": { "usd": 0.0004, "jpy": 0.06 }
+          },
+          "ap-east-2": {
+            "storage": { "usd": 0.024, "jpy": 3.60 },
+            "requests": { "usd": 0.0004, "jpy": 0.06 }
+          },
+          "ap-southeast-1": {
+            "storage": { "usd": 0.023, "jpy": 3.45 },
+            "requests": { "usd": 0.0004, "jpy": 0.06 }
+          }
+        }
+      },
+      "features": {
+        "durability": "99.999999999%",
+        "availability": "99.95%",
+        "encryption": true,
+        "versioning": true,
+        "lifecycle": true
+      },
+      "useCases": ["Web applications", "Analytics", "Backup"],
+      "description": "Unified object storage"
+    },
+    {
+      "id": "gcp-coldline",
+      "name": "Google Cloud Storage Coldline",
+      "provider": "GCP",
+      "type": "Archive Storage",
+      "category": "Archive",
+      "pricing": {
+        "model": "Pay-as-you-go",
+        "storage": "$0.004/GB/month",
+        "requests": "$0.05/1000 requests"
+      },
+      "features": {
+        "durability": "99.999999999%",
+        "availability": "99.0%",
+        "encryption": true,
+        "versioning": true,
+        "lifecycle": true
+      },
+      "useCases": ["Backup", "Archive", "Disaster recovery"],
+      "description": "Low-cost storage for infrequently accessed data"
+    },
+    {
+      "id": "gcp-archive",
+      "name": "Google Cloud Storage Archive",
+      "provider": "GCP",
+      "type": "Archive Storage",
+      "category": "Archive",
+      "pricing": {
+        "model": "Pay-as-you-go",
+        "storage": "$0.0012/GB/month",
+        "requests": "$0.10/1000 requests"
+      },
+      "features": {
+        "durability": "99.999999999%",
+        "availability": "99.0%",
+        "encryption": true,
+        "versioning": true,
+        "lifecycle": true
+      },
+      "useCases": ["Long-term archive", "Compliance", "Digital preservation"],
+      "description": "Lowest-cost storage for long-term archive"
+    },
+    {
+      "id": "gcp-disk",
+      "name": "Google Persistent Disk",
+      "provider": "GCP",
+      "type": "Block Storage",
+      "category": "Block",
+      "pricing": {
+        "model": "Pay-as-you-go",
+        "storage": "$0.10/GB/month",
+        "requests": "Included"
+      },
+      "features": {
+        "durability": "99.999%",
+        "availability": "99.99%",
+        "encryption": true,
+        "versioning": false,
+        "lifecycle": false
+      },
+      "useCases": ["Compute Engine", "Database storage"],
+      "description": "High-performance block storage"
+    },
+    {
+      "id": "gcp-local-ssd",
+      "name": "Google Local SSD",
+      "provider": "GCP",
+      "type": "Block Storage",
+      "category": "Block",
+      "pricing": {
+        "model": "Pay-as-you-go",
+        "storage": "$0.218/GB/month",
+        "requests": "Included"
+      },
+      "features": {
+        "durability": "99.9%",
+        "availability": "99.9%",
+        "encryption": true,
+        "versioning": false,
+        "lifecycle": false
+      },
+      "useCases": ["High-performance computing", "Database caching", "Analytics"],
+      "description": "High-performance local SSD storage"
+    },
+    {
+      "id": "gcp-filestore",
+      "name": "Google Filestore",
+      "provider": "GCP",
+      "type": "File Storage",
+      "category": "File",
+      "pricing": {
+        "model": "Pay-as-you-go",
+        "storage": "$0.20/GB/month",
+        "requests": "Included"
+      },
+      "features": {
+        "durability": "99.99%",
+        "availability": "99.99%",
+        "encryption": true,
+        "versioning": false,
+        "lifecycle": false
+      },
+      "useCases": ["Application migration", "Content management", "Web serving"],
+      "description": "Fully managed NFS file storage"
+    },
+    {
+      "id": "gcp-firestore",
+      "name": "Google Firestore",
+      "provider": "GCP",
+      "type": "NoSQL Database",
+      "category": "Database",
+      "pricing": {
+        "model": "Pay-as-you-go",
+        "storage": "$0.18/GB/month",
+        "requests": "$0.06/100K operations"
+      },
+      "features": {
+        "durability": "99.999%",
+        "availability": "99.99%",
+        "encryption": true,
+        "versioning": false,
+        "lifecycle": false
+      },
+      "useCases": ["Mobile applications", "Web applications", "Real-time sync"],
+      "description": "NoSQL document database"
+    },
+    {
+      "id": "oracle-object",
+      "name": "Oracle Object Storage",
+      "provider": "Oracle",
+      "type": "Object Storage",
+      "category": "Object",
+      "pricing": {
+        "model": "Pay-as-you-go",
+        "storage": "$0.025/GB/month",
+        "requests": "$0.0004/1000 requests"
+      },
+      "features": {
+        "durability": "99.999999999%",
+        "availability": "99.9%",
+        "encryption": true,
+        "versioning": true,
+        "lifecycle": true
+      },
+      "useCases": ["Web applications", "Backup", "Archive"],
+      "description": "Scalable object storage"
+    },
+    {
+      "id": "oracle-archive",
+      "name": "Oracle Archive Storage",
+      "provider": "Oracle",
+      "type": "Archive Storage",
+      "category": "Archive",
+      "pricing": {
+        "model": "Pay-as-you-go",
+        "storage": "$0.0025/GB/month",
+        "requests": "$0.10/1000 requests"
+      },
+      "features": {
+        "durability": "99.999999999%",
+        "availability": "99.9%",
+        "encryption": true,
+        "versioning": true,
+        "lifecycle": true
+      },
+      "useCases": ["Long-term backup", "Compliance", "Digital preservation"],
+      "description": "Low-cost archive storage"
+    },
+    {
+      "id": "oracle-block",
+      "name": "Oracle Block Volume",
+      "provider": "Oracle",
+      "type": "Block Storage",
+      "category": "Block",
+      "pricing": {
+        "model": "Pay-as-you-go",
+        "storage": "$0.0255/GB/month",
+        "requests": "Included"
+      },
+      "features": {
+        "durability": "99.999%",
+        "availability": "99.95%",
+        "encryption": true,
+        "versioning": false,
+        "lifecycle": false
+      },
+      "useCases": ["Compute instances", "Database storage"],
+      "description": "High-performance block storage"
+    },
+    {
+      "id": "oracle-file",
+      "name": "Oracle File Storage",
+      "provider": "Oracle",
+      "type": "File Storage",
+      "category": "File",
+      "pricing": {
+        "model": "Pay-as-you-go",
+        "storage": "$0.05/GB/month",
+        "requests": "Included"
+      },
+      "features": {
+        "durability": "99.999%",
+        "availability": "99.95%",
+        "encryption": true,
+        "versioning": false,
+        "lifecycle": false
+      },
+      "useCases": ["Shared file storage", "Content management", "Application data"],
+      "description": "Fully managed NFS file storage"
+    },
+    {
+      "id": "oracle-autonomous",
+      "name": "Oracle Autonomous Database",
+      "provider": "Oracle",
+      "type": "Database Storage",
+      "category": "Database",
+      "pricing": {
+        "model": "Pay-as-you-go",
+        "storage": "$0.02/GB/month",
+        "requests": "Included"
+      },
+      "features": {
+        "durability": "99.995%",
+        "availability": "99.995%",
+        "encryption": true,
+        "versioning": false,
+        "lifecycle": true
+      },
+      "useCases": ["Enterprise applications", "Data warehousing", "Analytics"],
+      "description": "Self-driving database storage"
+    },
+    {
+      "id": "ibm-cos",
+      "name": "IBM Cloud Object Storage",
+      "provider": "IBM",
+      "type": "Object Storage",
+      "category": "Object",
+      "pricing": {
+        "model": "Pay-as-you-go",
+        "storage": "$0.023/GB/month",
+        "requests": "$0.0004/1000 requests"
+      },
+      "features": {
+        "durability": "99.999999999%",
+        "availability": "99.99%",
+        "encryption": true,
+        "versioning": true,
+        "lifecycle": true
+      },
+      "useCases": ["Web applications", "Analytics", "Backup"],
+      "description": "Flexible object storage"
+    },
+    {
+      "id": "ibm-block",
+      "name": "IBM Block Storage",
+      "provider": "IBM",
+      "type": "Block Storage",
+      "category": "Block",
+      "pricing": {
+        "model": "Pay-as-you-go",
+        "storage": "$0.13/GB/month",
+        "requests": "Included"
+      },
+      "features": {
+        "durability": "99.999%",
+        "availability": "99.99%",
+        "encryption": true,
+        "versioning": false,
+        "lifecycle": false
+      },
+      "useCases": ["Virtual servers", "Database storage"],
+      "description": "High-performance block storage"
+    },
+    {
+      "id": "ibm-file",
+      "name": "IBM File Storage",
+      "provider": "IBM",
+      "type": "File Storage",
+      "category": "File",
+      "pricing": {
+        "model": "Pay-as-you-go",
+        "storage": "$0.13/GB/month",
+        "requests": "Included"
+      },
+      "features": {
+        "durability": "99.999%",
+        "availability": "99.99%",
+        "encryption": true,
+        "versioning": false,
+        "lifecycle": false
+      },
+      "useCases": ["Shared file storage", "Content management", "Backup"],
+      "description": "NFS-based file storage"
+    },
+    {
+      "id": "ibm-cloudant",
+      "name": "IBM Cloudant",
+      "provider": "IBM",
+      "type": "NoSQL Database",
+      "category": "Database",
+      "pricing": {
+        "model": "Pay-as-you-go",
+        "storage": "$1.00/GB/month",
+        "requests": "$0.015/1000 requests"
+      },
+      "features": {
+        "durability": "99.99%",
+        "availability": "99.99%",
+        "encryption": true,
+        "versioning": true,
+        "lifecycle": false
+      },
+      "useCases": ["Web applications", "Mobile applications", "IoT"],
+      "description": "Fully managed NoSQL JSON database"
+    },
+    {
+      "id": "ibm-db2",
+      "name": "IBM Db2 on Cloud",
+      "provider": "IBM",
+      "type": "Database Storage",
+      "category": "Database",
+      "pricing": {
+        "model": "Pay-as-you-go",
+        "storage": "$0.58/GB/month",
+        "requests": "Included"
+      },
+      "features": {
+        "durability": "99.99%",
+        "availability": "99.99%",
+        "encryption": true,
+        "versioning": false,
+        "lifecycle": true
+      },
+      "useCases": ["Enterprise applications", "Data warehousing", "Analytics"],
+      "description": "Fully managed SQL database"
+    }
+  ]
+}
