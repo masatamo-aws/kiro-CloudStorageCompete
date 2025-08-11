@@ -4,11 +4,13 @@ AWS、Microsoft Azure、Google Cloud、Oracle Cloud、IBM Cloudの各クラウ�
 
 ## 📸 スクリーンショット
 
-### ☀️ ライトモード
-![Light Mode](https://github.com/masatamo-aws/kiro-CloudStorageCompete/blob/main/assets/image/Light%20Mode.png)
+### ライトモード
+![Light Mode](assets/image/Light%20Mode.png)
+*ライトモードでの完全なアプリケーション画面 - 31のストレージサービス、フィルタリング機能、比較機能を表示*
 
-### 🌙 ダークモード
-![Dark Mode](https://github.com/masatamo-aws/kiro-CloudStorageCompete/blob/main/assets/image/Dark%20Mode.png)
+### ダークモード
+![Dark Mode](assets/image/Dark%20Mode.png)
+*ダークモードでの完全なアプリケーション画面 - 目に優しいダークテーマで同じ機能を提供*
 
 ## 🚀 機能
 
